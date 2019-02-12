@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="viewModel"
+            type= "com.example.week6day1.UserViewModel"/>
+
+
+
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.activities.MainActivity">
+
+        <EditText
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:afterTextChanged="@{editable -> viewModel.nameUserChanged(editable)}"
+            android:hint="Name"
+            android:textSize="18sp"
+            android:textColor="#995522"/>
+
+        <EditText
+            android:id="@+id/tvBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:afterTextChanged="@{editable -> viewModel.favBookChanged(editable)}"
+            android:hint="Favorite Book"
+            android:textSize="18sp"
+            android:textColor="#995522"/>
+
+        <EditText
+            android:id="@+id/tvMovie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:afterTextChanged="@{editable -> viewModel.favMovieChanged(editable)}"
+            android:hint="Favorite Movie"
+            android:textSize="18sp"
+            android:textColor="#995522"/>
+
+        <Button
+            android:id="@+id/btnPopulate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Populate the user"
+            android:onClick="@{view -> viewModel.handleClick(view)}"/>
+
+    </LinearLayout>
+</layout>
