@@ -9,3 +9,8 @@ DISPLAY
 
 
 ![alt text](https://github.com/elufire/Week6Day1/blob/master/Display.png)
+
+
+JUnit Testing
+
+![alt text](https://github.com/elufire/Week6Day1/blob/master/JUnitTests.png)
